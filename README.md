@@ -76,10 +76,9 @@ echo earl > /etc/hostname
 ln -sf /usr/share/zoneinfo/Canada/Pacific /etc/localtime
 ```
 #### 4. locale 설정
-/etc/locale.gen 에서 en_US.UTF-8을 uncomment 후
+/etc/locale.gen 에서 en_US.UTF-8 ko_KR.UTF-8을 uncomment 후
 ```
 locale-gen
-set-locale LANG="en_US.UTF-8"
 ```
 #### 5. user설정
 root password 변경
