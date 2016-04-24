@@ -74,6 +74,7 @@ echo earl > /etc/hostname
 #### 3. Timezone 설정
 ```
 ln -sf /usr/share/zoneinfo/Canada/Pacific /etc/localtime
+hwclock --systohc --utc
 ```
 #### 4. locale 설정
 /etc/locale.gen 에서 en_US.UTF-8 ko_KR.UTF-8을 uncomment 후
