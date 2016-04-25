@@ -156,6 +156,13 @@ sudo pacman -S gnome gnome-extra
 libx264 선택
 
 ```
-systemctl enable gdm.service
-systemctl start gdm.service
+pacman -Sy guake
 ```
+Gnome 설치 후 locale과 관련한 버그가 있는지 Gnome terminal이 실행 되지 않으므로 대체 터미널 설치.
+
+```
+systemctl enable gdm.service
+systemctl enable NetworkManager
+reboot
+```
+gdm을 enable 시키고 Gnome 실행 이후 네트워크 연결을 위해 NetworkManager를 부팅 시 실행시킨다.
