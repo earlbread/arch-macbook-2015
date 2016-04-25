@@ -50,8 +50,8 @@ EFS 파티션을 부트 파티션으로 사용
 mount /dev/sda4 /mnt
 mkdir /mnt/home
 mkdir /mnt/boot
-mount /dev/sda1 /boot
-mount /dev/sda5 /home
+mount /dev/sda1 /mnt/boot
+mount /dev/sda5 /mnt/home
 ```
 ### 9. base install
 ```
@@ -121,7 +121,7 @@ UUID는 fstab 참조
 ### 13. 와이파이 도구 설치
 재부팅하면 wifi-menu가 없기 때문에 설치해준다.
 ```
-Pacman -Sy wpa_supplicant dialog
+pacman -Sy wpa_supplicant dialog
 ```
 ### 14. Reboot
 ```
