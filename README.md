@@ -166,3 +166,52 @@ systemctl enable NetworkManager
 reboot
 ```
 gdm을 enable 시키고 Gnome 실행 이후 네트워크 연결을 위해 NetworkManager를 부팅 시 실행시킨다.
+
+## Post Installation
+### 1. yaourt install
+공식 저장소에서 지원하지 않는 패키지들을 설치하기 위해 yaourt를 설치한다.
+```
+git clone https://aur.archlinux.org/package-query.git
+cd package-query
+makepkg –sri
+cd ..
+
+git clone https://aur.archlinux.org/yaourt.git
+makepkg -si
+cd ..
+
+```
+
+### 2. 한글 폰트 설치
+Arch를 처음 설치하면 한글 폰트가 설치되어 있지 않아 한글이 모두 깨져서 나온다.
+한국어 설정(https://wiki.archlinux.org/index.php/Internationalization/Korean)을 참조하여 폰트를 설치하자.
+현재 위키에 나온 폰트 이외에도 스포카에서 개발한 [spoqa han sans](https://aur.archlinux.org/packages/spoqa-han-sans/)가 이용 가능하다.
+여기서는 나눔고딕과 나눔고딕 코딩 폰트를 설치
+```
+yaourt -Sy ttf-nanum ttf-nanum_coding
+```
+
+### 3. 한글 입력
+ibus-hangul 설치
+```
+pacman -Sy ibus-hangul
+```
+
+ibus-setup 실행, input method에서 Korean-Hangul 추가
+```
+ibus-setup
+```
+
+.bashrc에 추가
+```
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+```
+
+ibus-setup-hangul 에서 필요한 설정
+```
+ibus-setup-hangul
+```
+
+Settings -> Region & Language -> Input Sources 에서 Korean(Hangul)추가 후 재부팅
