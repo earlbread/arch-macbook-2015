@@ -235,3 +235,10 @@ chsh -s /usr/bin/zsh
 ```
 sudo pacman -Sy chromium
 ```
+
+### 3. locate 설치
+우분투에서는 기본으로 설치되어 있는 locate를 설치해야한다.
+```
+sudo pacman -Sy mlocate
+sudo updatedb
+``` 
