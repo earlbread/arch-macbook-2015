@@ -215,3 +215,9 @@ ibus-setup-hangul
 ```
 
 Settings -> Region & Language -> Input Sources 에서 Korean(Hangul)추가 후 재부팅
+
+### 4. Gnome Terminal 실행 안되는 문제 해결
+``제
+localectl set-locale LANG="en_US.UTF-8"
+sudo reboot
+```
