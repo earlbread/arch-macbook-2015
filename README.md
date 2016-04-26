@@ -221,3 +221,17 @@ Settings -> Region & Language -> Input Sources 에서 Korean(Hangul)추가 후 �
 localectl set-locale LANG="en_US.UTF-8"
 sudo reboot
 ```
+
+## 기타 필요사항
+### 1. zsh 설치
+```
+sudo pacman -Sy zsh zsh-completions
+sudo yaourt -Sy oh-my-zsh-git
+ln -sf /usr/share/oh-my-zsh/zshrc ~/.zshrc
+chsh -s /usr/bin/zsh
+```
+
+### 2. Chrome 설치
+```
+sudo pacman -Sy chromium
+```
