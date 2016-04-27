@@ -226,8 +226,7 @@ sudo reboot
 ### 1. zsh 설치
 ```
 sudo pacman -Sy zsh zsh-completions
-sudo yaourt -Sy oh-my-zsh-git
-ln -sf /usr/share/oh-my-zsh/zshrc ~/.zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 chsh -s /usr/bin/zsh
 ```
 
