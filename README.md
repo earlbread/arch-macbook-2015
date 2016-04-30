@@ -58,9 +58,9 @@ mount /dev/sda5 /mnt/home
 pacstrap /mnt base base-devel
 ```
 ### 10. fstab 파일 생성
-UUID로 fstab 생성
+fstab 생성
 ```
-genfstab -U /mnt >> /mnt/etc/fstab
+genfstab /mnt >> /mnt/etc/fstab
 ```
 ### 11. 기본사항 설정
 #### 1. 설정들을 위해 /mnt로 root 변경
@@ -115,9 +115,9 @@ timeout 4
 title     Arch
 linux     /vmlinuz-linux
 initrd    /initramfs-linux.img
-options   root=UUID=<uuid> rw
+options   root=/dev/sda4 rw
 ```
-UUID는 fstab 참조
+
 ### 13. 와이파이 도구 설치
 재부팅하면 wifi-menu가 없기 때문에 설치해준다.
 ```
