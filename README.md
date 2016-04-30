@@ -62,6 +62,18 @@ fstab 생성
 ```
 genfstab /mnt >> /mnt/etc/fstab
 ```
+ssd를 위하여 trim 설정(noatime, discard)
+```
+# UUID=28013fea-af70-4372-bfa5-0deb1a6dd17a 
+/dev/sda4               /               ext4            rw,noatime,data=ordered,discard 0 1 
+ 
+# UUID=67E3-17ED LABEL=EFI 
+/dev/sda1               /boot           vfat            rw,reltime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro     0 2 
+ 
+# UUID=7ce07ca2-b060-4b9b-817d-32608421f745 
+/dev/sda5               /home           ext4            rw,noatime,data=ordered,discard 0 2 
+```
+
 ### 11. 기본사항 설정
 #### 1. 설정들을 위해 /mnt로 root 변경
 ```
