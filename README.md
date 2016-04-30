@@ -253,3 +253,12 @@ sudo pacman -Sy chromium
 sudo pacman -Sy mlocate
 sudo updatedb
 ``` 
+
+### 4. multilib repository 추가
+32-bit applications on 64-bit installations
+/etc/pacman.conf
+```
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+부분 uncomment
