@@ -262,3 +262,8 @@ sudo updatedb
 Include = /etc/pacman.d/mirrorlist
 ```
 부분 uncomment
+
+### 5. kernel build시 필요한 패키지 설치
+```
+sudo pacman -Sy xmlto docbook-xsl kmod inetutils bc
+```
