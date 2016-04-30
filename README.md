@@ -68,7 +68,7 @@ ssd를 위하여 trim 설정(noatime, discard)
 /dev/sda4               /               ext4            rw,noatime,data=ordered,discard 0 1 
  
 # UUID=67E3-17ED LABEL=EFI 
-/dev/sda1               /boot           vfat            rw,reltime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro     0 2 
+/dev/sda1               /boot           vfat            rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=iso8859-1,shortname=mixed,errors=remount-ro     0 2 
  
 # UUID=7ce07ca2-b060-4b9b-817d-32608421f745 
 /dev/sda5               /home           ext4            rw,noatime,data=ordered,discard 0 2 
